@@ -9,9 +9,6 @@
   "author": "Tadeo Alvarez",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-plumber": "^1.2.1",
-    "gulp-sass": "^5.1.0",
     "normalize.css": "^8.0.1",
     "sass": "^1.49.9"
   }
