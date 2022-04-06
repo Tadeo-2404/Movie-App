@@ -4,7 +4,7 @@
   "description": "Una app de peliculas usando la API de IMDB",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch src/scss:build/css"
+    "sass": "sass src/scss:build/css"
   },
   "author": "Tadeo Alvarez",
   "license": "ISC",
