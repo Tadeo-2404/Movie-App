@@ -1,0 +1,28 @@
+@mixin titulo($color: black, $font-size: 2rem) {
+    font-size: $font-size;
+    color: $color;
+}
+
+@mixin imgDiv($width: 5rem, $heigth: 7rem) {
+    width: $width;
+    height: $heigth;
+}
+
+@mixin backgroundImg($url) {
+    background: linear-gradient(90deg, rgba(96,109,181,0.771212708716299) 0%, rgba(35,125,255,0.5387197115174195) 100%), $url;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+@mixin telefono {
+    @media(max-width: 488px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media(max-width: 768px) {
+        @content;
+    }
+}
