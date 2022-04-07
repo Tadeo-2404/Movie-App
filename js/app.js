@@ -198,8 +198,7 @@ function showBestRated(resultado) {
             <h2 class="text-center movie_title">${original_title}</h2>
         </a>
         `;
-         
-        console.log(DIV.childNodes[1].childNodes[1].src)
+
         if(DIV.childNodes[1].childNodes[1].src == "https://image.tmdb.org/t/p/w500/null") {
             DIV.childNodes[1].childNodes[1].src= "./src/assets/notFound.jpg"
         }
@@ -247,8 +246,8 @@ function showBest2022(resultado) {
         </a>
         `;
 
-        if(DIV.childNodes[1].src == "https://image.tmdb.org/t/p/w500/null") {
-            DIV.childNodes[1].src = "./src/assets/notFound.jpg"
+        if(DIV.childNodes[1].childNodes[1].src == "https://image.tmdb.org/t/p/w500/null") {
+            DIV.childNodes[1].childNodes[1].src= "./src/assets/notFound.jpg"
         }
 
         DIV.addEventListener('click', () => {
@@ -270,9 +269,9 @@ function showMoviesNew(resultado) {
             <h2 class="text-center movie_title">${original_title}</h2>
         </a>
         `
-        // cargarDetalles(id)
-        if(DIV.childNodes[1].src == "https://image.tmdb.org/t/p/w500/null") {
-            DIV.childNodes[1].src = "./src/assets/notFound.jpg"
+
+        if(DIV.childNodes[1].childNodes[1].src == "https://image.tmdb.org/t/p/w500/null") {
+            DIV.childNodes[1].childNodes[1].src= "./src/assets/notFound.jpg"
         }
 
         DIV.addEventListener('click', () => {
@@ -295,8 +294,8 @@ function showMovieMostTVShows(resultado) {
         </a>
         `
         // cargarDetalles(id)
-        if(DIV.childNodes[1].src == "https://image.tmdb.org/t/p/w500/null") {
-            DIV.childNodes[1].src = "./src/assets/notFound.jpg"
+        if(DIV.childNodes[1].childNodes[1].src == "https://image.tmdb.org/t/p/w500/null") {
+            DIV.childNodes[1].childNodes[1].src= "./src/assets/notFound.jpg"
         }
 
         DIV.addEventListener('click', () => {
@@ -319,8 +318,8 @@ function showPopularToday(resultado) {
         </a>
         `
 
-        if(DIV.childNodes[1].src == "https://image.tmdb.org/t/p/w500/null") {
-            DIV.childNodes[1].src = "./src/assets/notFound.jpg"
+        if(DIV.childNodes[1].childNodes[1].src == "https://image.tmdb.org/t/p/w500/null") {
+            DIV.childNodes[1].childNodes[1].src= "./src/assets/notFound.jpg"
         }
 
         DIV.addEventListener('click', () => {
@@ -337,7 +336,7 @@ function showSearch(resultado) {
     }
 
     resultado.forEach((element) => {
-        let {original_name, overview, vote_average, poster_path, id, release_date} = element;
+        let {original_name,  original_title,overview, vote_average, poster_path, id, release_date} = element;
         const DIV = document.createElement('DIV');
         DIV.classList.add('movie_container');
         DIV.innerHTML = `
@@ -347,8 +346,8 @@ function showSearch(resultado) {
         </a>
         `;
 
-        if(DIV.childNodes[1].src == "https://image.tmdb.org/t/p/w500/null") {
-            DIV.childNodes[1].src = "./src/assets/notFound.jpg"
+        if(DIV.childNodes[1].childNodes[1].src == "https://image.tmdb.org/t/p/w500/null") {
+            DIV.childNodes[1].childNodes[1].src= "./src/assets/notFound.jpg"
         }
 
         if(DIV.childNodes[3].innerText === "undefined") {
