@@ -22,6 +22,7 @@ const carouselSearch = document.querySelector('.carousel_search');
 const containerSearch = document.querySelector('.movies_container_search');
 const containerKidsMovies = document.querySelector('.movies_container_kidsMovies');
 const hero = document.querySelector('.hero_container');
+const link = document.querySelector('.nav-link');
 
 const leftArrow = document.querySelectorAll('.switchLeft');
 const rightArrow = document.querySelectorAll('.switchRigth');
@@ -52,6 +53,10 @@ rightArrow.forEach((rightArrow, i) => {
         container[i].scrollLeft += 150;
     });
 });
+
+link.addEventListener('click', () => {
+    alert('This App uses the TMDB Api, for more information visit their page at...https://www.themoviedb.org/')
+})
 
 searchIcon.addEventListener('click', buscar);
 
@@ -193,9 +198,10 @@ function showBestRated(resultado) {
             <h2 class="text-center movie_title">${original_title}</h2>
         </a>
         `;
-
-        if(DIV.childNodes[1].src == "https://image.tmdb.org/t/p/w500/null") {
-            DIV.childNodes[1].src = "./src/assets/notFound.jpg"
+         
+        console.log(DIV.childNodes[1].childNodes[1].src)
+        if(DIV.childNodes[1].childNodes[1].src == "https://image.tmdb.org/t/p/w500/null") {
+            DIV.childNodes[1].childNodes[1].src= "./src/assets/notFound.jpg"
         }
 
         DIV.addEventListener('click', () => {
