@@ -350,6 +350,10 @@ function showSearch(resultado) {
             DIV.childNodes[1].childNodes[1].src= "./src/assets/notFound.jpg"
         }
 
+         if(DIV.childNodes[1].childNodes[3].innerHTML == "undefined") {
+             DIV.childNodes[1].childNodes[3].innerHTML = `${original_title}`
+         }
+
         DIV.addEventListener('click', () => {
              cargarDetalles(original_title, overview, vote_average, poster_path, release_date)
         })
