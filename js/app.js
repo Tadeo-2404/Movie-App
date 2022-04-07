@@ -1,6 +1,6 @@
 //VARIABLES
 const API_KEY = "api_key=2066d5dcd52d698c19d8494abc8e4c33";
-const BASE_URL = "http://api.themoviedb.org/3";
+const BASE_URL = "https://api.themoviedb.org/3";
 const MOST_POPULAR = BASE_URL +  "/discover/movie?sort_by=popularity.desc&" + API_KEY;
 const BEST_RATE = BASE_URL + "/movie/top_rated?" + API_KEY;
 const BEST_2022 = BASE_URL + "/discover/movie?with_genres=18&primary_release_year=2022&" + API_KEY;
